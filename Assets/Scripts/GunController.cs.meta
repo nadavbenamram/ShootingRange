@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e70c53e5131d7cf44873f37ca9c022c6
+timeCreated: 1509816510
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - m_GunShot: {fileID: 1929940385666688, guid: 472cfb1af465ad6439f25e123c893af1,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
