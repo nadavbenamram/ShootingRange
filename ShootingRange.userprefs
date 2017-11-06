@@ -1,10 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LaserController.cs">
     <Files>
-      <File FileName="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" Line="29" Column="6" />
+      <File FileName="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" Line="1" Column="1" />
       <File FileName="Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrPointerInputModule.cs" Line="1" Column="1" />
-      <File FileName="Assets\GoogleVR\Legacy\Scripts\GvrPointerManager.cs" Line="33" Column="4" />
+      <File FileName="Assets\GoogleVR\Legacy\Scripts\GvrPointerManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GunController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LaserController.cs" Line="14" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
