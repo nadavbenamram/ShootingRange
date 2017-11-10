@@ -9,7 +9,6 @@ public class WeaponsManager
 	private const string GUN_KEY = "gun";
 	private const string LASER_KEY = "laser";
 	private const string FIREBALL_KEY = "fireball";
-	private const string DEFAULT_WEAPON_KEY = GUN_KEY; //Gun is the default weapon;
 	private const string GUN_PREFAB_NAME = "Gun";
 	private const string LASER_PREFAB_NAME = "Laser";
 	private const string FIREBALL_PREFAB_NAME = "Fireball";
@@ -33,15 +32,15 @@ public class WeaponsManager
 		{
 			gameObject.SetActive (false);
 		}
-
-		//set default weapon active
-		m_ActiveWeapon = m_Weapons [DEFAULT_WEAPON_KEY];
-		m_ActiveWeapon.SetActive (true);
 	}
 
 	public void SwitchWeapon(string i_WeaponKey)
 	{
-		m_ActiveWeapon.SetActive (false);
+		if (m_ActiveWeapon != null) 
+		{
+			m_ActiveWeapon.SetActive (false);
+		}
+
 		m_ActiveWeapon = m_Weapons [i_WeaponKey];
 		m_ActiveWeapon.SetActive (true);
 	}
@@ -49,25 +48,26 @@ public class WeaponsManager
 
 public class PlayerController : MonoBehaviour 
 {
+	private const string DEFAULT_WEAPN_KEY = "gun";
+
 	private WeaponsManager m_WeaponManager;
+	public static string SelectedWeapon = DEFAULT_WEAPN_KEY;
+
 	// Use this for initialization
 	void Start () 
 	{
 		m_WeaponManager = new WeaponsManager ();
+		setWeapon (SelectedWeapon);
+		Debug.Log ("Player started with weapon = " + SelectedWeapon);
 	}
 
-	string[] test = { "laser", "fireball", "gun" }; 
-	int i = 0;
-	// Update is called once per frame
-	bool wasdown = false;
-	void Update () {
-		bool down = Input.GetMouseButton(1);
-		if (down && !wasdown) 
-		{
-			m_WeaponManager.SwitchWeapon (test[i%3]);
-			i++;
-		}
+	void Update () 
+	{
+		
+	}
 
-		wasdown = down;
+	private void setWeapon(string i_WeaponKey)
+	{
+		m_WeaponManager.SwitchWeapon (i_WeaponKey);
 	}
 }

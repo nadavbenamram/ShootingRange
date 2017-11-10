@@ -29,4 +29,3 @@ C:\Git\ShootingRange\Temp\bin\Debug\UnityEngine.HoloLens.xml
 C:\Git\ShootingRange\Temp\bin\Debug\UnityEngine.VR.xml
 C:\Git\ShootingRange\obj\Debug\Assembly-CSharp.dll
 C:\Git\ShootingRange\obj\Debug\Assembly-CSharp.pdb
-C:\Git\ShootingRange\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache

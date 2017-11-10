@@ -1,18 +1,27 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LaserController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.cs">
     <Files>
       <File FileName="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" Line="1" Column="1" />
       <File FileName="Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrPointerInputModule.cs" Line="1" Column="1" />
       <File FileName="Assets\GoogleVR\Legacy\Scripts\GvrPointerManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GunController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LaserController.cs" Line="14" Column="3" />
+      <File FileName="Assets\Scripts\LaserController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="53" Column="2" />
+      <File FileName="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\GoogleVR\Demos\Scripts\VideoDemo\AutoPlayVideo.cs" Line="1" Column="1" />
+      <File FileName="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviderFactory.cs" Line="1" Column="1" />
+      <File FileName="Assets\SteamVR\InteractionSystem\Core\Scripts\DebugUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FireballController.cs" Line="1" Column="1" />
+      <File FileName="Assets\SteamVR\InteractionSystem\Core\Scripts\SoundPlayOneshot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LoadOnClick.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SelectWeaponController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ExitScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnterScript.cs" Line="9" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="C:\Git\ShootingRange\Assets\Scripts\PlayerController.cs" line="19" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
