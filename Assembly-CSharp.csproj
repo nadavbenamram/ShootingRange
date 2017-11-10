@@ -180,8 +180,10 @@
      <Compile Include="Assets\Scripts\LaserController.cs" />
      <Compile Include="Assets\Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PointsController.cs" />
      <Compile Include="Assets\Scripts\SaveSceneScript.cs" />
      <Compile Include="Assets\Scripts\SelectWeaponController.cs" />
+     <Compile Include="Assets\Scripts\Timer.cs" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
      <None Include="Assets\GoogleVR\Plugins\Android\proguard-gvr.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrAdditiveOverlay.shader" />

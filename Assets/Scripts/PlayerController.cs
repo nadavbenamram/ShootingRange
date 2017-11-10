@@ -49,25 +49,62 @@ public class WeaponsManager
 public class PlayerController : MonoBehaviour 
 {
 	private const string DEFAULT_WEAPN_KEY = "gun";
+	public static string SelectedWeapon = DEFAULT_WEAPN_KEY;
 
 	private WeaponsManager m_WeaponManager;
-	public static string SelectedWeapon = DEFAULT_WEAPN_KEY;
+	private static int m_Points = 0;
+	public static bool IsGameRunning { get; private set; }
 
 	// Use this for initialization
 	void Start () 
 	{
 		m_WeaponManager = new WeaponsManager ();
 		setWeapon (SelectedWeapon);
+		IsGameRunning = true;
 		Debug.Log ("Player started with weapon = " + SelectedWeapon);
 	}
 
 	void Update () 
 	{
-		
+	}
+
+	public void StartGame()
+	{
+		m_Points = 0;
+		IsGameRunning = true;
+		Timer.StopWatch.Reset ();
+		Timer.StopWatch.Start ();
+	}
+
+	public void PauseGame()
+	{
+		IsGameRunning = false;
+		Timer.StopWatch.Stop();
+	}
+
+	public void ResumeGame()
+	{
+		IsGameRunning = true;
+		Timer.StopWatch.Start();
 	}
 
 	private void setWeapon(string i_WeaponKey)
 	{
 		m_WeaponManager.SwitchWeapon (i_WeaponKey);
+	}
+
+	public static void AddPoints(int i_PointsToAdd)
+	{
+		m_Points += i_PointsToAdd;
+	}
+
+	public static void DecreasePoints(int i_PointsToDecrease)
+	{
+		m_Points -= i_PointsToDecrease;
+	}
+
+	public static string GetPoints()
+	{
+		return m_Points.ToString ();
 	}
 }

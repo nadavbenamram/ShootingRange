@@ -20,18 +20,10 @@ public class DemoSceneManager : MonoBehaviour {
     Input.backButtonLeavesApp = true;
   }
 
-
-	private bool m_LastTriggerDown = false;
-  void Update() {
+	void Update() {
     // Exit when (X) is tapped.
     if (Input.GetKeyDown(KeyCode.Escape)) {
       Application.Quit();
     }
-		bool currentTrigger = GvrPointerInputModule.Pointer.TriggerDown;
-		if (true == currentTrigger && false == m_LastTriggerDown) {
-		Debug.Log ("nadav1");
-	}
-
-		m_LastTriggerDown = currentTrigger;
   }
 }

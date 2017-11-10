@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ExitScript : MonoBehaviour {
-	private const float TIME_TO_EXIT = 5f;
+	private const float TIME_TO_EXIT = 2f;
 	private float m_Counter;
 
 	public void Start()
