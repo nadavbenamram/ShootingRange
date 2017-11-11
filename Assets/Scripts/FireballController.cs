@@ -18,7 +18,7 @@ public class FireballController : MonoBehaviour
 		{
 			GameObject fireBall = Instantiate(m_FireBallPrefab, this.transform.position + new Vector3(0, 1), this.transform.rotation) as GameObject;
 			Rigidbody rigidbody = fireBall.GetComponent<Rigidbody> ();
-			rigidbody.velocity = this.transform.forward * 15;
+			rigidbody.velocity = this.transform.forward * 30;
 		}
 	}
 }

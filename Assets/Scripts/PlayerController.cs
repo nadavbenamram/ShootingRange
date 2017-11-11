@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using GVR;
+using System;
 
 public class WeaponsManager
 {
@@ -48,12 +49,15 @@ public class WeaponsManager
 
 public class PlayerController : MonoBehaviour 
 {
-	private const string DEFAULT_WEAPN_KEY = "gun";
+	private const string DEFAULT_WEAPN_KEY = "laser";
+
 	public static string SelectedWeapon = DEFAULT_WEAPN_KEY;
+	public static bool IsGameRunning { get; private set; }
+	public static int ActiveLevel;
 
 	private WeaponsManager m_WeaponManager;
 	private static int m_Points = 0;
-	public static bool IsGameRunning { get; private set; }
+	private static TimeSpan m_TotalGameTime;
 
 	// Use this for initialization
 	void Start () 
@@ -70,10 +74,20 @@ public class PlayerController : MonoBehaviour
 
 	public void StartGame()
 	{
+		ActiveLevel = 1;
 		m_Points = 0;
 		IsGameRunning = true;
+		m_TotalGameTime = TimeSpan.Zero;
 		Timer.StopWatch.Reset ();
 		Timer.StopWatch.Start ();
+	}
+
+	public static void NextLevel()
+	{
+		m_TotalGameTime += Timer.StopWatch.Elapsed;
+		Timer.StopWatch.Reset ();
+		Timer.StopWatch.Start ();
+		ActiveLevel++;
 	}
 
 	public void PauseGame()
@@ -106,5 +120,10 @@ public class PlayerController : MonoBehaviour
 	public static string GetPoints()
 	{
 		return m_Points.ToString ();
+	}
+
+	public static string GetTotalTime()
+	{
+		return Timer.GetTimeAsString (m_TotalGameTime);
 	}
 }

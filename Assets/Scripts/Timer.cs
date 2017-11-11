@@ -24,10 +24,10 @@ public class Timer : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		m_CounterText.text = makeItDoubleDigit(StopWatch.Elapsed.Hours) + ":" + makeItDoubleDigit(StopWatch.Elapsed.Minutes) + ":" + makeItDoubleDigit(StopWatch.Elapsed.Seconds);
+		m_CounterText.text = GetTimeAsString (StopWatch.Elapsed);
 	}
 
-	private string makeItDoubleDigit(int i_Number)
+	private static string makeItDoubleDigit(int i_Number)
 	{
 		if (i_Number.ToString ().Length == 1) {
 			return "0" + i_Number;
@@ -36,5 +36,10 @@ public class Timer : MonoBehaviour
 		{
 			return i_Number.ToString ();
 		}
+	}
+
+	public static string GetTimeAsString(System.TimeSpan i_TimeSpan)
+	{
+		return makeItDoubleDigit(i_TimeSpan.Hours) + ":" + makeItDoubleDigit(i_TimeSpan.Minutes) + ":" + makeItDoubleDigit(i_TimeSpan.Seconds);
 	}
 }

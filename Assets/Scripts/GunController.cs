@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GunController : MonoBehaviour {
-
+	private const int LINE_LENGTH = 100;
 	public GameObject m_GunShot;
 	public ParticleSystem m_Flash;
 	// Use this for initialization
@@ -15,10 +15,11 @@ public class GunController : MonoBehaviour {
 	void Update() {
 		bool currentTrigger = GvrPointerInputModule.Pointer.TriggerDown;
 		if (true == currentTrigger && false == m_LastTriggerDown) {
-			GameObject gunShot = Instantiate (m_GunShot, this.transform.position, this.transform.rotation) as GameObject;
+			GameObject gunShot = Instantiate (m_GunShot, this.transform.position, m_GunShot.transform.rotation) as GameObject;
 			m_Flash.Play ();
+			Rigidbody rigidbody = gunShot.GetComponent<Rigidbody> ();
+			rigidbody.velocity = this.transform.forward * 50;
 		}
 
-		m_LastTriggerDown = currentTrigger;
 	}
 }

@@ -42,9 +42,16 @@ public class LaserController : MonoBehaviour
 			if (Physics.Raycast (ray, out hit, LINE_LENGTH)) 
 			{
 				m_Line.SetPosition (1, hit.point);
-				if ((true == hit.collider) && ("target" == hit.transform.gameObject.tag))
+				if ((true == hit.collider) && (true == hit.collider.transform.gameObject.name.Contains("Target")))
 				{
-					Destroy (hit.transform.gameObject);
+					if (hit.collider.transform.gameObject.name.Contains ("Friendly")) 
+					{
+						hit.collider.transform.gameObject.SendMessage("DoWhenFriendHitted");
+					} 
+					else 
+					{
+						hit.collider.transform.gameObject.SendMessage("DoWhenTargetHitted");
+					}
 				}
 			} 
 			else
