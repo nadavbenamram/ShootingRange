@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GunShotController : MonoBehaviour 
 {
-	private float m_TimeToDestroy = 0.4f;
+	private float m_TimeToDestroy = 0.8f;
 
 	// Update is called once per frame
 	void Update () 
