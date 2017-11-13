@@ -8,5 +8,5 @@ public class SelectWeaponController : MonoBehaviour
 	{
 		PlayerController.SelectedWeapon = i_Key;
 		Debug.Log ("selcted weapon = " + i_Key);
-	}
+    }
 }

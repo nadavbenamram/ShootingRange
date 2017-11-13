@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingLeftRight : MonoBehaviour {
+public class MovingLeftRight : MonoBehaviour, IRunningScript {
     [SerializeField] float m_MovingSpeed = 11f;
     Vector3 m_MovingDirection;
     [SerializeField] float m_LeftCap = 3f;

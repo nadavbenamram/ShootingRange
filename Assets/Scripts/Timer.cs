@@ -8,7 +8,6 @@ public class Timer : MonoBehaviour
 {
 	public static Stopwatch StopWatch;
 	private Text m_CounterText = null;
-	private bool m_PrevIsRunning = false;
 
 	static Timer()
 	{

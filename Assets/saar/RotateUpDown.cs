@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateUpDown : MonoBehaviour {
+public class RotateUpDown : MonoBehaviour, IRunningScript {
     Vector3 m_RotationDirection = Vector3.right;
     float m_RotationSpeed = 80f;
     [SerializeField] bool m_IsScriptRunning = true;

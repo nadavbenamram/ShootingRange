@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotate90to270 : MonoBehaviour {
+public class Rotate90to270 : MonoBehaviour, IRunningScript {
     [SerializeField] Vector3 m_RotationDirection = Vector3.forward;
     float m_RotationSpeed = 170f;
     [SerializeField] bool m_IsScriptRunning = true;

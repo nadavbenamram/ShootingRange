@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Moving_Up_Down : MonoBehaviour {
+public class Moving_Up_Down : MonoBehaviour, IRunningScript {
     [SerializeField] float m_MovingSpeed = 2f;
     Vector3 m_MovingDirection;
     readonly float k_BottomCap = 3f;

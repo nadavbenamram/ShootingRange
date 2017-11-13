@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateOnPlace : MonoBehaviour {
+public class RotateOnPlace : MonoBehaviour, IRunningScript {
     [SerializeField] float m_RotationSpeed = 80f;
     bool m_IsScriptRunning = true;
 
