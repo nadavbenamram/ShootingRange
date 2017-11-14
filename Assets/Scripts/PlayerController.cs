@@ -49,7 +49,7 @@ public class WeaponsManager
 
 public class PlayerController : MonoBehaviour 
 {
-	private const string DEFAULT_WEAPN_KEY = "laser";
+	private const string DEFAULT_WEAPN_KEY = "gun";
 
 	public static string SelectedWeapon = DEFAULT_WEAPN_KEY;
 	public static bool IsGameRunning { get; private set; }

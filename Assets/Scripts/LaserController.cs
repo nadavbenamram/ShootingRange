@@ -20,7 +20,7 @@ public class LaserController : MonoBehaviour
 	// Update is called once per frame
 	private void Update ()
 	{
-		if (GvrPointerInputModule.Pointer.TriggerDown) 
+		if (GvrPointerInputModule.Pointer != null && GvrPointerInputModule.Pointer.TriggerDown) 
 		{
 			StopCoroutine ("fireLaser");
 			StartCoroutine ("fireLaser");
@@ -30,7 +30,7 @@ public class LaserController : MonoBehaviour
 	private IEnumerator fireLaser()
 	{
 		m_Line.enabled = true;
-		while (GvrPointerInputModule.Pointer.Triggering) 
+		while (GvrPointerInputModule.Pointer != null && GvrPointerInputModule.Pointer.Triggering) 
 		{
 			Ray ray = new Ray (transform.position, transform.forward);
 			RaycastHit hit;
