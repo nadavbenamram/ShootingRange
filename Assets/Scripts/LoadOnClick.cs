@@ -9,7 +9,7 @@ public class LoadOnClick : MonoBehaviour {
 		SceneManager.LoadScene (scene);
 	}
 
-	public void LoadSavedScene()
+	static public void LoadSavedScene()
 	{
 		string sceneKey = PlayerPrefs.GetString ("SavedScene");
 		SceneManager.LoadScene (sceneKey);
